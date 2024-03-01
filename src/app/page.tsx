@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Homepage = () => {
@@ -13,7 +14,7 @@ const Homepage = () => {
     >
       <div className="h-full flex flex-col lg:flex-row px-4 mb-20 sm:px-8 lg:px-20 xl:px-48">
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative">
+        <div className="h-1/2 mr-10 mt-20 lg:h-96 lg:w-1/3 relative">
           <Image src="/ana.jpg" alt="" fill className="object-contain" />
         </div>
         {/* TEXT CONTAINER */}
@@ -28,12 +29,20 @@ const Homepage = () => {
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4">
-            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
+            <Link
+            href="/portfolio">
+                 <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
               View My Work
             </button>
-            <button className="p-4 rounded-lg ring-1 ring-black">
+            </Link>
+            <Link 
+            href="/contact">
+              <button className="p-4 rounded-lg ring-1 ring-black">
               Contact Me
             </button>
+            </Link>
+           
+            
           </div>
         </div>
       </div>
